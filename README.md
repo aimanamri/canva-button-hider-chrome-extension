@@ -30,6 +30,10 @@ Canva for Education puts a big **Send to teacher** button in the editor toolbar.
 
 Click the toolbar icon, flip the switch, done. The change applies instantly to every open Canva tab, with no reload.
 
+<p align="center">
+  <img src="docs/popup.png" alt="Screenshot of the extension popup" width="320" />
+</p>
+
 ## Features
 
 - **Instant toggle** from a clean popup, with a live preview of what changes.
