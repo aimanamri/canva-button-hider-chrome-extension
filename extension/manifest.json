@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Canva Button Hider",
+  "version": "2.0.0",
+  "description": "Hides the \"Send to teacher\" button on Canva Education design pages. One click to toggle.",
+  "minimum_chrome_version": "102",
+  "homepage_url": "https://github.com/aimanamri/canva-button-hider-chrome-extension",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.canva.com/design/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.canva.com/design/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "toggle-hider": {
+      "suggested_key": {
+        "default": "Alt+Shift+H",
+        "mac": "Alt+Shift+H"
+      },
+      "description": "Turn the button hider on or off"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    },
+    "default_title": "Canva Button Hider"
+  }
+}
